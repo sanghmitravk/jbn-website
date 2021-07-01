@@ -7,25 +7,26 @@
 
 import * as React from "react"
 import PropTypes from "prop-types"
-import { useStaticQuery, graphql } from "gatsby"
-
-import Header from "./header"
+// import { useStaticQuery, graphql } from "gatsby"
+import { Link } from "gatsby"
 import "./layout.css"
+import HomeComponent from "./home"
+import AboutComponent from "./about"
+import ContactComponent from "./contact"
 
-const Layout = ({ children }) => {
-  const data = useStaticQuery(graphql`
-    query SiteTitleQuery {
-      site {
-        siteMetadata {
-          title
-        }
-      }
-    }
-  `)
+const Layout = ({ children, pageTitle }) => {
+  // const data = useStaticQuery(graphql`
+  //   query SiteTitleQuery {
+  //     site {
+  //       siteMetadata {
+  //         title
+  //       }
+  //     }
+  //   }
+  // `)
 
   return (
     <>
-      <Header siteTitle={data.site.siteMetadata?.title || `Title`} />
       <div
         style={{
           margin: `0 auto`,
@@ -33,17 +34,35 @@ const Layout = ({ children }) => {
           padding: `0 1.0875rem 1.45rem`,
         }}
       >
+        <title>{pageTitle}</title>
+        <h1> {pageTitle}</h1>
+        <ul>
+          <li>
+            <Link to="/" component={HomeComponent}>
+              Home
+            </Link>
+          </li>
+          <li>
+            <Link to="/about/" component={AboutComponent}>
+              About
+            </Link>
+          </li>
+          <li>
+            <Link to="/contact/" component={ContactComponent}>
+              Contact
+            </Link>
+          </li>
+        </ul>
         <main>{children}</main>
-        <footer
+        {/* <footer
           style={{
             marginTop: `2rem`,
           }}
         >
           © {new Date().getFullYear()},
-          {/* {` `} */}
-          {/* <a href="https://www.gatsbyjs.com">Gatsby</a> */}
+         
           Blog
-        </footer>
+        </footer>  */}
       </div>
     </>
   )
