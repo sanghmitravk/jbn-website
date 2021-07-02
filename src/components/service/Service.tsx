@@ -13,7 +13,7 @@ const Service = () => {
                     {
                         content.map((result, index) =>
                             <div className="column" key={index}>
-                                <img src={require(result.img)} alt="" />
+                                {/* <img src={require(result.img)} alt="" /> */}
                                 <div className="subtitle" >
                                     {result.heading}
                                 </div>
