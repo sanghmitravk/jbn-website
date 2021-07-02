@@ -1,7 +1,4 @@
-export const img1 = "../../images/one.svg"
-export const img2 = "../../images/two.svg"
-export const img3 = "../../images/three.svg"
-export const img4 = "../../images/four.svg"
+import { img1, img2, img3, img4 } from "../images/image"
 
 export const jumbtotron = {
   title: `We are a Data-Led Creative Content Agency.`,

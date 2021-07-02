@@ -1,38 +1,27 @@
-import React, { HTMLAttributes } from "react"
-import PropTypes from "prop-types"
-import { Link } from "gatsby"
+import React from "react"
+import { link } from '../../config/Header';
+import jbnLogo from '../../images/icon.svg';
 
-export interface Props extends HTMLAttributes<HTMLDivElement> {
-  siteTitle?: string
-}
+const Header = () => (
+  <div>
+    <nav className="navbar container" role="navigation" aria-label="main navigation">
+      <div className="navbar-brand">
+        <a className="navbar-item" href="/">
+          <img src={jbnLogo} width="auto" height="auto" />
+        </a>
+      </div>
 
-const Header = ({ siteTitle }: Props) => (
-  <header
-    style={{
-      background: `rebeccapurple`,
-      marginBottom: `1.45rem`,
-    }}
-  >
-    <div
-      style={{
-        margin: `0 auto`,
-        maxWidth: 960,
-        padding: `1.45rem 1.0875rem`,
-      }}
-    >
-      <h1 style={{ margin: 0 }}>
-        <Link
-          to="/"
-          style={{
-            color: `white`,
-            textDecoration: `none`,
-          }}
-        >
-          {siteTitle}
-        </Link>
-      </h1>
-    </div>
-  </header>
+      <div id="navbarBasicExample" className="navbar-menu">
+        <div className="navbar-end">
+          <div className="navbar-item">
+            {
+              link.map((link, index) => <a key={index}>{`${link.link}`}</a>)
+            }
+          </div>
+        </div>
+      </div>
+    </nav>
+  </div>
 )
 
 export default Header

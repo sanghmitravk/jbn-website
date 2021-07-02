@@ -1,10 +1,16 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { content } from '../../config/SideWide';
 import '../../style/base.scss'
 import './Service.scss'
 import ContactButton from '../contactButton/ContactButton';
+import img1 from '../../images/one.svg';
+import img2 from '../../images/two.svg';
+import img3 from '../../images/three.svg';
+import img4 from '../../images/four.svg';
+
 
 const Service = () => {
+    const image = [img1, img2, img3, img4];
     return (
         <>
             <div className="title has-text-centered py-4">Our Services</div>
@@ -13,7 +19,7 @@ const Service = () => {
                     {
                         content.map((result, index) =>
                             <div className="column" key={index}>
-                                {/* <img src={require(result.img)} alt="" /> */}
+                                <img src={image[index]} alt="services" />
                                 <div className="subtitle" >
                                     {result.heading}
                                 </div>

@@ -1,15 +1,20 @@
 import React from 'react';
 import { content } from '../../config/SideWide';
 import ContactButton from '../contactButton/ContactButton';
+import img1 from '../../images/JBN-Strategy.gif';
+import img2 from '../../images/JBN-Creative.gif';
+import img3 from '../../images/JBN_Content.gif';
+import img4 from '../../images/JBN-Production.gif';
 
 const Section = () => {
+    const image = [img1, img2, img3, img4];
     return (
         <div className="container"> {
             content.map((content, index) => {
                 console.log('JBN-Production', content.image)
                 return <div className={`columns is-justify-content-space-between ${index % 2 == 1 ? 'is-flex-direction-row-reverse' : ''}`} key={index}>
                     <div className="column is-two-thirds">
-                        {/* <img src={require(content.image)} /> */}
+                        <img src={image[index]} />
                     </div>
                     <div className="column is-one-fifth">
                         <div className="has-text-weight-medium pb-4">{`${content.heading}`}</div>
