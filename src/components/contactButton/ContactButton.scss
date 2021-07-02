@@ -1,0 +1,10 @@
+@import '../../style/base.scss';
+
+.ContactButton {
+    .button {
+        background-color: $primary;
+        border-color: $primary;
+        max-width: auto;
+        min-width: 200px;
+    }
+}

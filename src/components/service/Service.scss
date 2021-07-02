@@ -1,0 +1,14 @@
+@import "../../style/base.scss";
+
+.service {
+  background-color: $secondary;
+  .subtitle {
+    color: $primary;
+    text-transform: uppercase;
+  }
+  ul {
+    li {
+      color: $white;
+    }
+  }
+}
