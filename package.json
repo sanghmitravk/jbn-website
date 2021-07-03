@@ -15,6 +15,7 @@
     "gatsby-plugin-sharp": "^3.0.0",
     "gatsby-source-filesystem": "^3.0.0",
     "gatsby-transformer-sharp": "^3.0.0",
+    "gatsby-video": "^0.2.0",
     "node-sass": "^6.0.1",
     "prop-types": "^15.7.2",
     "react": "^17.0.1",
@@ -23,9 +24,11 @@
     "sass": "^1.35.1"
   },
   "devDependencies": {
+    "@types/node": "^16.0.0",
     "@types/react-helmet": "^6.1.1",
     "bulma": "^0.9.3",
     "formik": "^2.2.9",
+    "gatsby-image-background-slider": "0.0.4",
     "prettier": "2.2.1",
     "react-intersection-observer": "^8.32.0",
     "react-ticker": "^1.2.2"

@@ -5,12 +5,12 @@ import Header from "../header/Header";
 import Footer from "../footer/Footer";
 import ImageRotate from "../imageRotate/ImageRotate";
 import Contact from "../contact/Contact";
+import Jumbotron from "../jumbotron/Jumbotron";
 
 const HomeComponent = () => {
     return (
         <div>
-            <Header />
-            <ImageRotate />
+            <Jumbotron />
             <Section />
             <Service />
             <Contact />

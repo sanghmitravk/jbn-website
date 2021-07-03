@@ -7,7 +7,7 @@ export interface Props extends HTMLAttributes<HTMLDivElement> {
 const ContactButton = ({ className }: Props) => {
     return (
         <div className={`ContactButton ${className}`}>
-            <button className="button is-rounded is-uppercase has-text-weight-medium"  >Contact</button>
+            <button className="button is-rounded is-uppercase has-text-weight-medium" >Contact</button>
         </div>
     );
 };

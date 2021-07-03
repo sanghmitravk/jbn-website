@@ -11,7 +11,7 @@ const Footer = () => {
     return (
         <div className="Footer">
             <footer className="container">
-                <img src={jbnLogo} width="auto" height="auto" />
+                <img src={jbnLogo} width="auto" className="pt-6" height="auto" />
                 <div className="subtitle is-6" >{logoText}</div>
                 {footerData.map((li, index) => <div className="content is-medium mb-1" key={index}>
                     {li.li}
