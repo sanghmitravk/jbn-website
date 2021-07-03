@@ -1,5 +1,8 @@
 import { img1, img2, img3, img4 } from "../images/image"
 
+export const companyName = `JBN (John Brown Novus).`;
+export const logoText = `Part of the dentsu group.`;
+
 export const jumbtotron = {
   title: `We are a Data-Led Creative Content Agency.`,
   subtitle: `We drive business results through content, which is relevant, engaging, effective and efficient.`,

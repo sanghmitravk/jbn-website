@@ -12,7 +12,7 @@ const Section = () => {
         <div className="container"> {
             content.map((content, index) => {
                 console.log('JBN-Production', content.image)
-                return <div className={`columns is-justify-content-space-between ${index % 2 == 1 ? 'is-flex-direction-row-reverse' : ''}`} key={index}>
+                return <div className={`columns is-align-items-center is-justify-content-space-between ${index % 2 == 1 ? 'is-flex-direction-row-reverse' : ''}`} key={index}>
                     <div className="column is-two-thirds">
                         <img src={image[index]} />
                     </div>

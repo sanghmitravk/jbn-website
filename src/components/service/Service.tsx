@@ -19,7 +19,7 @@ const Service = () => {
                     {
                         content.map((result, index) =>
                             <div className="column" key={index}>
-                                <img src={image[index]} alt="services" />
+                                <img src={image[index]} alt="services" className="mb-4" />
                                 <div className="subtitle" >
                                     {result.heading}
                                 </div>
