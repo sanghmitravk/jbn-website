@@ -1,7 +1,5 @@
 import React, { HTMLAttributes } from 'react';
 import './ContactButton.scss';
-
-
 export interface Props extends HTMLAttributes<HTMLDivElement> {
     className?: string
 }

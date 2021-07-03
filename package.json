@@ -27,7 +27,8 @@
     "bulma": "^0.9.3",
     "formik": "^2.2.9",
     "prettier": "2.2.1",
-    "react-intersection-observer": "^8.32.0"
+    "react-intersection-observer": "^8.32.0",
+    "react-ticker": "^1.2.2"
   },
   "keywords": [
     "gatsby"
