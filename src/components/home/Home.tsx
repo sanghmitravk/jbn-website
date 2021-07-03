@@ -8,8 +8,8 @@ import ImageRotate from "../imageRotate/ImageRotate";
 const HomeComponent = () => {
     return (
         <div>
-            <ImageRotate />
             <Header />
+            <ImageRotate />
             <Section />
             <Service />
             <ImageRotate />

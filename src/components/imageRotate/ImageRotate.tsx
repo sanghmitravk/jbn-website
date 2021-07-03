@@ -3,9 +3,11 @@ import Ticker from 'react-ticker';
 import image from '../../images/JBN-Logo-Ticker.png'
 
 const ImageRotate = () => (
-    <Ticker>
-        {() => <><img src={image} alt="" /></>}
+    <Ticker height="50">
+        {() => (<img src={image} alt="" height="100%" />)}
     </Ticker>
+
 )
 
 export default ImageRotate;
+
