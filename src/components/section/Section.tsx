@@ -13,7 +13,7 @@ const Section = () => {
             content.map((content, index) => {
                 return <div className={`columns is-align-items-center is-justify-content-space-between ${index % 2 == 1 ? 'is-flex-direction-row-reverse' : ''}`} key={index}>
                     <div className="column is-two-thirds">
-                        <img src={image[index]} />
+                        <img src={image[index]} width="100%" />
                     </div>
                     <div className="column is-one-fifth">
                         <div className="has-text-weight-medium pb-4">{`${content.heading}`}</div>

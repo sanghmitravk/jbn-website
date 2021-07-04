@@ -4,7 +4,7 @@ import ImageRotate from "../imageRotate/ImageRotate";
 import srcVideo from '../../images/JBN_Creative_Contet_Video.mp4';
 import './Jumbotron.scss';
 import { jumbtotron } from "../../config/SideWide";
-import Slider from "../slider/Slider";
+// import Slider from "../slider/Slider";
 
 const Jumbotron = () => {
     return (
@@ -12,20 +12,13 @@ const Jumbotron = () => {
             <div className="hero-head">
                 <Header />
             </div>
-            <div className="hero-body columns px-0 is-align-items-flex-start">
-                <div className="column background-video">
-                    <video autoPlay muted loop >
-                        <source src={srcVideo} type="video/mp4" />
-                    </video>
-                </div>
-                <div className="column">
+            <div className="hero-body px-0 pt-1 pb-0">
+                <video autoPlay loop muted>
+                    <source src={srcVideo} type="video/ogg" />
+                </video>
+                <div >
                     <div className="has-text-weight-bold is-size-3	">{jumbtotron.title}</div>
                     <div className="is-size-4">{jumbtotron.subtitle}</div>
-                    <div className="columns">
-                        <div className="is-half">
-                            {/* <Slider /> */}
-                        </div>
-                    </div>
                 </div>
             </div>
             <div className="hero-foot">

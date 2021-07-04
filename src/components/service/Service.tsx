@@ -8,7 +8,6 @@ import img2 from '../../images/two.svg';
 import img3 from '../../images/three.svg';
 import img4 from '../../images/four.svg';
 
-
 const Service = () => {
     const image = [img1, img2, img3, img4];
     return (

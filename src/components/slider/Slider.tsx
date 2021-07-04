@@ -9,7 +9,7 @@ import { graphql, useStaticQuery } from 'gatsby';
 const Slider = () => (
   <>
     {/* <main>{children}</main> */}
-    <BackgroundSlider 
+    <BackgroundSlider
       query={useStaticQuery(graphql`
         query {
           backgrounds: allFile (filter: {sourceInstanceName: {eq: "backgrounds"}}){
@@ -28,13 +28,13 @@ const Slider = () => (
       transition={4} // transition duration between images
       duration={8} // how long an image is shown
       // specify images to include (and their order) according to `relativePath`
-      images={[img1, img2, img3, img4]} 
+      images={[img1, img2, img3, img4]}
 
       // pass down standard element props
       style={{
         transform: "rotate(-2deg) scale(.9)",
-      }}           
-    > 
+      }}
+    >
       {/* Captions in sync with background images*/}
       <div>Woof</div>
       <div>Meow</div>
@@ -45,6 +45,6 @@ const Slider = () => (
       <div>I need to find better hobbies</div>
     </BackgroundSlider>
   </>
-)  
+)
 
 export default Slider;

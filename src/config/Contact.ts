@@ -33,7 +33,7 @@ export const subject = [
     data: "Services",
   },
   {
-    data: "Send CV?Folio",  
+    data: "Send CV/Folio",  
   },
 
   {

@@ -7,7 +7,7 @@ const Contact = () => {
   return (
     <div className="py-6 container ">
       <div className="ContentData mb-6">
-        <div className="content is-medium has-text-weight-semibold	">
+        <div className="content mb-1 is-medium has-text-weight-semibold	">
           {content.heading}
         </div>
         <div className="content">{content.data}</div>
