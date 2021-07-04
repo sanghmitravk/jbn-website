@@ -1,9 +1,18 @@
-.navbar {
-  .navbar-brand {
-    .navbar-item {
-      img {
-        max-height: 100px;
+.Header {
+  position: relative;
+  z-index: 1;
+
+  .navbar {
+    .navbar-brand {
+      .navbar-item {
+        img {
+          max-height: 100px;
+        }
       }
     }
   }
+}
+
+html {
+  scroll-behavior: smooth;
 }

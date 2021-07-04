@@ -1,10 +1,10 @@
 export const link = [
   {
     link: "Services",
-    path: "",
+    path: "services",
   },
   {
     link: "Contact",
-    path: "",
+    path: "contact",
   },
 ]

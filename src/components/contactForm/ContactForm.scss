@@ -10,12 +10,15 @@
   }
 
   .button:hover {
-    background-color: #d1cfcc;
-    border-color: #707070;
+    background-color: $primary;
+    border-color: $primary;
   }
 
-  .button:focus {
-    border-color: #707070;
+  .button:focus,
+  .button:active {
+    background-color: $black;
+    border-color: $black;
+    color: $white;
   }
 
   .button:focus:not(:active),
@@ -49,7 +52,7 @@
   }
 
   textarea {
-  background-color: $primary;
+    background-color: $primary;
   }
 
   select {

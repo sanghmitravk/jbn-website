@@ -1,6 +1,11 @@
 .Jumbotron {
   video {
-    // min-width: 100%;
-    // min-height: 100%;
+    position: absolute;
+    // height: inherit;
+  }
+
+  .JumbotronText {
+    position: relative;
+    z-index: 1;
   }
 }

@@ -11,7 +11,7 @@ const HomeComponent = () => {
         <div>
             <Jumbotron />
             <Section />
-            <Service />
+            <Service  />
             <Contact />
             <ImageRotate />
             <Footer />

@@ -13,7 +13,7 @@ const Service = () => {
     const image = [img1, img2, img3, img4]
     return (
         <>
-            <div className="title has-text-centered py-4">Our Services</div>
+            <div id="services" className="title has-text-centered py-4">Our Services</div>
             <div className="service py-6 has-text-centered is-hidden-mobile">
                 <div className="columns has-text-centered container m-auto ">
                     {content.map((result, index) => (

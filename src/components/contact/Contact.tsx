@@ -5,7 +5,7 @@ import './Contact.scss';
 
 const Contact = () => {
   return (
-    <div className="py-6 container ">
+    <div id="contact" className="py-6 container ">
       <div className="ContentData mb-6">
         <div className="content mb-1 is-medium has-text-weight-semibold	">
           {content.heading}

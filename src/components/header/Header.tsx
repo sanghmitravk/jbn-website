@@ -5,7 +5,7 @@ import { logoText } from "../../config/SideWide";
 import './Header.scss';
 
 const Header = () => (
-  <div>
+  <div className="has-background-white Header py-2">
     <nav className="navbar container" role="navigation" aria-label="main navigation">
       <div className="navbar-brand is-flex-direction-column is-align-items-flex-start">
         <a className="navbar-item p-0" href="/">
@@ -18,7 +18,7 @@ const Header = () => (
         <div className="navbar-end">
           <div className="navbar-item">
             {
-              link.map((link, index) => <a key={index} className={`has-text-black ${index === 1 ? 'pl-6' : ''}`}>{`${link.link}`}</a>)
+              link.map((link, index) => <a href={`#${link.path}`} key={index} className={`has-text-black ${index === 1 ? 'pl-6' : ''}`}>{`${link.link}`}</a>)
             }
           </div>
         </div>
