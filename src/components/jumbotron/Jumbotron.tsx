@@ -12,14 +12,14 @@ const Jumbotron = () => {
             <div className="hero-head">
                 <Header />
             </div>
-            <div className="hero-body px-0 pt-1 pb-0">
-                <video autoPlay loop muted>
+            <div className="hero-body">
+                {/* <video autoPlay loop muted>
                     <source src={srcVideo} type="video/ogg" />
                 </video>
                 <div >
                     <div className="has-text-weight-bold is-size-3	">{jumbtotron.title}</div>
                     <div className="is-size-4">{jumbtotron.subtitle}</div>
-                </div>
+                </div> */}
             </div>
             <div className="hero-foot">
                 <ImageRotate />

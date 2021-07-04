@@ -1,0 +1,24 @@
+.carousel {
+  overflow: hidden;
+}
+
+.inner {
+  white-space: nowrap;
+  transition: transform 0.3s;
+}
+
+.carousel-item {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: auto;
+  flex-direction: column;
+}
+
+.background-dark {
+  background-color: #262626;
+}
+
+.background-light {
+  background-color: #a5a5a5;
+}
