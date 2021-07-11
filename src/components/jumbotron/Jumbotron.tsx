@@ -18,12 +18,12 @@ const Jumbotron = () => {
             };
 
             window.addEventListener('resize', handleWindowResize);
-            return () => window.removeEventListener('resize', handleWindowResize);
+            return () => typeof window !== undefined && window.removeEventListener('resize', handleWindowResize);
         }, []);
 
         return windowWidth;
     };
-    const src = useWindowWidth() >= 769 ? desktopVideo : tabletVideo;
+    const src = useWindowWidth() >= 1024 ? desktopVideo : tabletVideo;
 
     return (
         <div className="Jumbotron hero is-fullheight">
