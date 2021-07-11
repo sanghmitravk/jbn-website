@@ -9,10 +9,10 @@ const Footer = () => {
     let today = new Date();
     let yyyy = today.getFullYear();
     return (
-        <div className="Footer">
+        <div className="Footer ">
             <footer className="container">
                 <img src={jbnLogo} width="auto" className="pt-6" height="auto" />
-                <div className="subtitle is-6" >{logoText}</div>
+                <div className="subtitle is-6 pb-2" >{logoText}</div>
                 {footerData.map((li, index) => <div className="content is-medium mb-1" key={index}>
                     {li.li}
                 </div>
