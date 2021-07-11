@@ -9,7 +9,7 @@ const Footer = () => {
     let today = new Date();
     let yyyy = today.getFullYear();
     return (
-        <div className="Footer ">
+        <div className="Footer section">
             <footer className="container">
                 <img src={jbnLogo} width="auto" className="pt-6" height="auto" />
                 <div className="subtitle is-6 pb-2" >{logoText}</div>

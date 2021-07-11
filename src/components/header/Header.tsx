@@ -5,6 +5,7 @@ import { logoText } from "../../config/SideWide";
 import './Header.scss';
 
 const Header = () => (
+  <div className="section py-0">
     <div className="has-background-white Header py-2">
       <nav className="navbar container" role="navigation" aria-label="main navigation">
         <div className="navbar-brand is-flex-direction-column is-align-items-flex-start">
@@ -25,6 +26,7 @@ const Header = () => (
         </div>
       </nav>
     </div>
+  </div>
 )
 
 export default Header

@@ -18,7 +18,7 @@ const Service = () => {
                 <div className="columns has-text-centered container m-auto ">
                     {content.map((result, index) => (
                         <div className="column" key={index}>
-                            <img src={image[index]} alt="services" className="mb-4" />
+                        <img src={image[index]} alt="services" className="mb-4" />
                             <div className="subtitle">{result.heading}</div>
                             <ul>
                                 {result.services.map((result, index) => {

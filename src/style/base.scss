@@ -1,9 +1,10 @@
 @charset "utf-8";
 
-body, html {
-    margin: 0px;
-    padding: 0px;
-    overflow-x: hidden;
+body,
+html {
+  margin: 0px;
+  padding: 0px;
+  overflow-x: hidden;
 }
 $primary: #fefd00;
 $secondary: #262626;
@@ -12,5 +13,11 @@ $black: #000;
 $light: #a5a5a5;
 $background: $secondary;
 $font-family: Montserrat;
+
+@media only screen and (max-width: 1023px) {
+  .container {
+    margin: 0 24px;
+  }
+}
 
 @import "~bulma/bulma.sass";
