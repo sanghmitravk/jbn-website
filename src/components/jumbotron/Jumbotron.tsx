@@ -17,8 +17,12 @@ const Jumbotron = () => {
                     <source src={srcVideo} type="video/ogg" />
                 </video>
                 <div className="JumbotronText container">
-                    <div className="has-text-weight-bold is-size-3">{jumbtotron.title}</div>
-                    <div className="is-size-4">{jumbtotron.subtitle}</div>
+                    <div className="columns ">
+                        <div className="column JumbotronTextPadding is-one-third is-offset-half-desktop is-offset-three-fifths-tablet">
+                            <div className="has-text-weight-bold is-size-3 pb-4">{jumbtotron.title}</div>
+                            <div className="is-size-4">{jumbtotron.subtitle}</div>
+                        </div>
+                    </div>
                 </div>
             </div>
             <div className="hero-foot">
