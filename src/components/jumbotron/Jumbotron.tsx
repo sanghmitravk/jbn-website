@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useEffect, useState } from "react"
 import Header from "../header/Header"
 import ImageRotate from "../imageRotate/ImageRotate";
 import desktopVideo from '../../images/JBN_Creative_Contet_Video.mp4';
@@ -8,13 +8,23 @@ import { jumbtotron } from "../../config/SideWide";
 // import Slider from "../slider/Slider";
 
 const Jumbotron = () => {
+    // const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+    const useWindowWidth = () => {
+        const [windowWidth, setWindowWidth] = useState(window.innerWidth);
 
-    const getVideoSrc = (width: number) => {
-        if (width >= 769) return desktopVideo;
-        if (width <= 768) return tabletVideo;
-        return tabletVideo;
+        useEffect(() => {
+            const handleWindowResize = () => {
+                setWindowWidth(window.innerWidth);
+            };
+
+            window.addEventListener('resize', handleWindowResize);
+            return () => window.removeEventListener('resize', handleWindowResize);
+        }, []);
+
+        return windowWidth;
     };
-    const src = getVideoSrc(window.innerWidth);
+    const src = useWindowWidth() >= 769 ? desktopVideo : tabletVideo;
+
     return (
         <div className="Jumbotron hero is-fullheight">
             <div className="hero-head">
