@@ -5,7 +5,11 @@ import './ImageRotate.scss';
 
 const ImageRotate = () => (
     <Ticker height="90" >
-        {() => (<div className="ImageRotate"><img src={image} alt="" height="100%" /></div>)}
+        {({ index }) => (
+            <>
+                <div className="ImageRotate" key={index}><img src={image} alt="" height="100%" /></div>
+            </>
+        )}
     </Ticker>
 )
 
