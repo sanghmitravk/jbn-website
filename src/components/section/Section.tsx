@@ -10,7 +10,7 @@ import './Section.scss';
 const Section = () => {
     const image = [img1, img2, img3, img4];
     return (
-        <div className="">
+        <div className="DataSection">
             <div className="container"> {
                 content.map((content, index) => {
                     return <div className={`columns is-align-items-center is-justify-content-space-between ${index % 2 == 1 ? 'is-flex-direction-row-reverse' : ''}`} key={index}>

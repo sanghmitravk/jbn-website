@@ -8,7 +8,7 @@ import { jumbtotron } from "../../config/SideWide";
 
 const Jumbotron = () => {
     return (
-        <section className="Jumbotron hero is-fullheight">
+        <div className="Jumbotron hero is-fullheight">
             <div className="hero-head">
                 <Header />
             </div>
@@ -24,7 +24,7 @@ const Jumbotron = () => {
             <div className="hero-foot">
                 <ImageRotate />
             </div>
-        </section>
+        </div>
     )
 }
 
