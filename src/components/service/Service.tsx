@@ -1,4 +1,4 @@
-import React, { useState } from "react"
+import React from "react"
 import { content } from "../../config/SideWide"
 import "../../style/base.scss"
 import "./Service.scss"

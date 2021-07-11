@@ -10,14 +10,14 @@ import './Section.scss';
 const Section = () => {
     const image = [img1, img2, img3, img4];
     return (
-        <div className="section">
+        <div className="">
             <div className="container"> {
                 content.map((content, index) => {
                     return <div className={`columns is-align-items-center is-justify-content-space-between ${index % 2 == 1 ? 'is-flex-direction-row-reverse' : ''}`} key={index}>
                         <div className="column is-two-thirds">
                             <img src={image[index]} width="100%" />
                         </div>
-                        <div className="column is-one-fifth">
+                        <div className="column is-one-fifth-desktop">
                             <div className="has-text-weight-medium pb-4">{`${content.heading}`}</div>
                             <div className="has-text-weight-bold is-size-4 py-4">{`${content.title}`}</div>
                             <div className="is-size-5 py-4">{`${content.subtitle}`}</div>
