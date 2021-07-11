@@ -68,8 +68,8 @@ const ContactForm = () => {
                             }} /> */}
                         </div>
                     </div>
-                    <div className="columns is-mobile is-align-items-center">
-                        <div className="column is-narrow">
+                    <div className="columns is-align-items-center">
+                        <div className="column is-narrow ">
                             <button type="submit" disabled={isSubmitting} className="button is-rounded is-uppercase has-text-weight-medium">Submit</button>
                         </div>
                         <div className="column ">
