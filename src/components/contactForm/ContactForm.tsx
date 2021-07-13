@@ -75,10 +75,9 @@ const ContactForm = () => {
                                         onChange={(event: any) => {
                                             setFieldValue("file", event.currentTarget.files[0]);
                                         }} />
-                                        <p><div id="file"  /></p>
                                     <div className="is-flex p-3">
-                                        <a className="is-clickable"  >Attach a File.</a> &nbsp;
-                                        <p>Word or PDF only (max 10mb)</p>
+                                        <div className="is-clickable"> <a className="is-clickable"  >Attach a File.</a></div> &nbsp;
+                                        <div>Word or PDF only (max 10mb)</div>
                                     </div>
                                 </div>
                             </div>
