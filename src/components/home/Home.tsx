@@ -5,6 +5,7 @@ import Footer from "../footer/Footer";
 import ImageRotate from "../imageRotate/ImageRotate";
 import Contact from "../contact/Contact";
 import Jumbotron from "../jumbotron/Jumbotron";
+import CookiesConsent from "../cookies/CookiesConsent";
 
 const HomeComponent = () => {
     return (
@@ -15,6 +16,7 @@ const HomeComponent = () => {
             <Contact />
             <ImageRotate />
             <Footer />
+            {/* <CookiesConsent /> */}
         </div>)
 }
 

@@ -7,14 +7,14 @@ const Contact = () => {
   return (
     <div className="section">
       <div id="contact" className="py-6  container is-mobile-fluid">
-        <div className="ContentData mb-6">
-          <div className="content mb-1 is-medium has-text-weight-semibold	">
-            {content.heading}
-          </div>
-          <div className="content">{content.data}</div>
-        </div>
-        <div className="columns">
+        <div className="columns Display">
           <div className="column">
+            <div className="ContentData mb-6">
+              <div className="content mb-1 is-medium has-text-weight-semibold	">
+                {content.heading}
+              </div>
+              <div className="content">{content.data}</div>
+            </div>
             <ContactForm />
           </div>
           <div className="column is-one-fifth">

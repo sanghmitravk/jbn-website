@@ -1,0 +1,28 @@
+@import "../../style/base.scss";
+
+.CookiesConsent {
+  .button {
+    background-color: $grey;
+    border-color: $grey;
+    max-width: auto;
+    min-width: 200px;
+  }
+
+  .button:hover {
+    background-color: $black;
+    border-color: $black;
+    color: $white;
+  }
+
+  .button:focus,
+  .button:active {
+    background-color: $black;
+    border-color: $black;
+    color: $white;
+  }
+
+  .button:focus:not(:active),
+  .button.is-focused:not(:active) {
+    box-shadow: none;
+  }
+}
