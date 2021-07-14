@@ -7,6 +7,16 @@
 @media only screen and (max-width: 768px) {
   .Display {
     display: flex;
-    flex-direction: column-reverse;
+    flex-direction: column;
+    .item1 {
+      order: 2;
+    }
+    .item2 {
+      order: 3;
+    }
+
+    .item3 {
+      order: 1;
+    }
   }
 }

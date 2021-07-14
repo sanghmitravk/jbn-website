@@ -16,7 +16,7 @@ const HomeComponent = () => {
             <Contact />
             <ImageRotate />
             <Footer />
-            <CookiesConsent />
+            {/* <CookiesConsent /> */}
         </div>)
 }
 

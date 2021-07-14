@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useState } from "react"
 import { Formik, Form, Field, getIn, ErrorMessage } from "formik";
 import './ContactForm.scss';
 import { subject } from "../../config/Contact";
@@ -24,6 +24,7 @@ function getStyles(errors: any, fieldName: string) {
 }
 
 const ContactForm = () => {
+    const [fileName, setFileName] = useState('')
     return (
         <Formik
             initialValues={{
@@ -31,16 +32,25 @@ const ContactForm = () => {
                 email: "",
                 subject: "",
                 message: "",
-                file: ""
+                file: null
             }}
             onSubmit={(values, actions) => {
                 console.log(JSON.stringify(values, null, 2))
+                console.log(JSON.stringify(
+                    {
+                        fileName: values.file.name,
+                        type: values.file.type,
+                        size: `${values.file.size} bytes`
+                    },
+                    null,
+                    2
+                ))
                 actions.setSubmitting(false)
                 actions.setStatus({
                     sent: true,
                     msg: 'Thank you, we aim to respond within 24 hours.'
                 })
-                // actions.resetForm();
+                actions.resetForm();
             }}
             validateOnChange={false}
             validateOnBlur={false}
@@ -72,9 +82,12 @@ const ContactForm = () => {
                                 />
                                 <div className="ChooseFile">
                                     <input id="file" name="file" type="file"
+                                        accept=".doc, .pdf"
                                         onChange={(event: any) => {
                                             setFieldValue("file", event.currentTarget.files[0]);
+                                            setFileName(event.currentTarget.files[0].name)
                                         }} />
+                                    {fileName && <div className="pl-3">{fileName}</div>}
                                     <div className="is-flex p-3">
                                         <div className="is-clickable"> <a className="is-clickable"  >Attach a File.</a></div> &nbsp;
                                         <div>Word or PDF only (max 10mb)</div>
