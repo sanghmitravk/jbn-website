@@ -6,15 +6,6 @@ import { Cookies } from '../../config/Cookies';
 import './CookiesConsent.scss';
 const CookiesConsent = () => {
 
-    const [open, setOpen] = useState(false)
-
-    const html = document.querySelector('html')
-
-    useEffect(() => {
-        open ? document.body.style.overflow = 'hidden' : document.body.style.overflow = 'hidden'
-
-    }, [open])
-
     return (
 
         <CookieConsent
