@@ -1,9 +1,9 @@
 import React, { useState } from "react"
-import { Formik, Form, Field, getIn, ErrorMessage } from "formik";
+import { Formik, Form, Field, getIn } from "formik";
 import './ContactForm.scss';
 import { subject } from "../../config/Contact";
 import * as Yup from 'yup';
-
+import axios from 'axios';
 const SignupSchema = Yup.object().shape({
     name: Yup.string()
         .required(),
@@ -23,8 +23,18 @@ function getStyles(errors: any, fieldName: string) {
     }
 }
 
+const toBase64 = (file: Blob, removePrefix = false) => new Promise((resolve, reject) => {
+    const reader = new FileReader();
+    reader.readAsDataURL(file);
+    reader.onload = () => {
+        const result = reader.result;
+        return resolve(removePrefix ? result?.split(',')[1] : result);
+    }
+    reader.onerror = error => reject(error);
+});
+
 const ContactForm = () => {
-    const [fileName, setFileName] = useState('')
+    const [fileName, setFileName] = useState(null)
     return (
         <Formik
             initialValues={{
@@ -34,23 +44,48 @@ const ContactForm = () => {
                 message: "",
                 file: null
             }}
-            onSubmit={(values, actions) => {
+            onSubmit={async (values, actions) => {
                 console.log(JSON.stringify(values, null, 2))
                 console.log(JSON.stringify(
                     {
                         fileName: values.file.name,
                         type: values.file.type,
-                        size: `${values.file.size} bytes`
+                        size: `${values.file.size} bytes`,
+                        path: values.file.path
                     },
                     null,
                     2
                 ))
+
+                setFileName(null);
                 actions.setSubmitting(false)
-                actions.setStatus({
-                    sent: true,
-                    msg: 'Thank you, we aim to respond within 24 hours.'
+                const appURL = 'http://localhost:3000/sendmail';
+                axios.post(appURL, {
+                    name: values.name,
+                    email: values.email,
+                    message: values.message,
+                    subject: values.subject,
+                    fileName:values.file.name,
+                    file: await toBase64(values.file)
                 })
-                actions.resetForm();
+                    .then(function (response: any) {
+                        console.log(response);
+                        if (response.status === 200) {
+                            actions.setStatus({
+                                sent: true,
+                                msg: 'Thank you, we aim to respond within 24 hours.'
+                            })
+                            actions.resetForm();
+                        }
+
+                    })
+                    .catch(function (error: any) {
+                        console.log(error);
+                        actions.setStatus({
+                            sent: true,
+                            msg: 'We regret to say that something is wrong in our end.'
+                        })
+                    });
             }}
             validateOnChange={false}
             validateOnBlur={false}
@@ -80,8 +115,8 @@ const ContactForm = () => {
                                     component="textarea" className="textarea"
 
                                 />
-                                <div className="ChooseFile">
-                                    <input id="file" name="file" type="file"
+                                <div className="ChooseFile" >
+                                    <input id="file" name="file" type="file" disabled={isSubmitting}
                                         accept=".doc, .pdf"
                                         onChange={(event: any) => {
                                             setFieldValue("file", event.currentTarget.files[0]);
@@ -89,7 +124,7 @@ const ContactForm = () => {
                                         }} />
                                     {fileName && <div className="pl-3">{fileName}</div>}
                                     <div className="is-flex p-3">
-                                        <div className="is-clickable"> <a className="is-clickable"  >Attach a File.</a></div> &nbsp;
+                                        <div className="is-clickable"> <a className="is-clickable">Attach a File.</a></div> &nbsp;
                                         <div>Word or PDF only (max 10mb)</div>
                                     </div>
                                 </div>
